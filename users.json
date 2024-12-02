@@ -1,0 +1,30 @@
+[
+    {
+        "id": 1,
+        "username": "dadadadadadada@gmail.com",
+        "email": "dadadadadadada@gmail.com",
+        "phone": "+380962912831",
+        "password": "dadadadadadada@gmail.com"
+    },
+    {
+        "id": 2,
+        "username": "dadaadaadadadadadadad@gmail.com",
+        "email": "dadaadaadadadadadadad@gmail.com",
+        "phone": "null2",
+        "password": "dadaadaadadadadadadad@gmail.com"
+    },
+    {
+        "id": 3,
+        "username": "da@gmail.com",
+        "email": "da@gmail.com",
+        "phone": "null3",
+        "password": "da@gmail.com"
+    },
+    {
+        "id": 4,
+        "username": "dadasdasdasdasdas@gmail.com",
+        "email": "null4",
+        "phone": "+380962912831",
+        "password": "+380962912831"
+    }
+]

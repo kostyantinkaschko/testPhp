@@ -1,0 +1,312 @@
+body {
+    margin: 0;
+    background: url("../img/bg.jpg");
+    background-size: 100%;
+}
+
+.hide {
+    display: none;
+}
+
+.title {
+    margin: 1rem 0;
+    text-align: center;
+}
+
+.form {
+    color: fieldtext !important;
+    margin-top: 2rem;
+    margin-left: auto;
+    margin-right: auto;
+    /* display: flex;
+    flex-direction: column;  */
+    width: 30%;
+    min-width: 288px;
+}
+
+.form-field input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.emailForm .form-field input {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+}
+
+.emailForm .form-field input:focus {
+    border-color: #be0027;
+    outline: none;
+}
+
+
+.form h2 {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+}
+
+.form a {
+    text-align: center;
+}
+
+.form-field {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin-bottom: 1.5rem;
+}
+
+.form input {
+    outline: none;
+    background-color: transparent;
+}
+
+.form input[type=text],
+.form input[type=email],
+.form input[type=password] {
+    padding: 1rem;
+    padding-bottom: 0.6rem;
+    width: 100%;
+    border: none;
+    border-bottom: 3px solid #000;
+    transition: border 0.3s ease;
+}
+
+.form input[type=submit],
+.form button {
+    width: 60%;
+}
+
+.label {
+    position: absolute;
+    top: 1rem;
+    left: 0;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    font-weight: bold;
+}
+
+.form input:focus+.label,
+.form input:not(:placeholder-shown)+.label {
+    top: -0.2rem;
+    color: #be0027;
+    font-size: 0.8rem;
+}
+
+.form input:focus {
+    border-bottom: 3px solid #be0027;
+}
+
+.btn {
+    padding: 0.6rem 2rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+}
+
+.blackText{
+    color: #000;
+}
+
+
+.whiteText{
+    color: #fff;
+}
+
+
+.btn:hover {
+    opacity: 0.7;
+}
+
+.btn-submit {
+    background-color: #be0027;
+}
+
+.buttonClass {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.wrapper {
+    margin: 0 auto;
+    padding: 20px;
+    background-image: linear-gradient(0deg, #bababa 0%, #ffffff 100%);
+}
+
+
+.hyperlinks {
+    display: flex;
+    justify-content: center;
+}
+
+.borderWrapper {
+    border-radius: 0 0 50px 50px;
+}
+
+.answer {
+    display: flex;
+}
+
+.orangeButton,
+.redButton {
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 50px;
+    text-align: center;
+    text-decoration: none;
+    transition: all .5s ease;
+}
+
+.orangeButton {
+    color: #fff;
+    background: #e28314;
+}
+
+
+.orangeButton:hover {
+    filter: invert(1);
+}
+
+.redButton:hover {
+    background: #000;
+}
+
+.redButton {
+    color: #fff;
+    background: #be0027;
+}
+
+.slideFromBottom {
+    animation: slideFromBottom 2s;
+}
+
+
+#oko {
+    background-color: transparent;
+    outline: none;
+    border: 3px solid black;
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    cursor: pointer;
+}
+
+.activatedOko {
+    background-color: #000 !important;
+}
+
+.password {
+    display: flex;
+    flex-direction: row;
+    column-gap: 10px;
+}
+
+
+.password div:first-child {
+    width: 100%;
+}
+
+.password div:last-child {
+    position: relative;
+    width: 10px;
+    height: 10px;
+}
+
+.kvadratoProfile {
+    display: flex;
+    column-gap: 5px;
+}
+
+.avatar {
+    width: 45%;
+}
+
+.avatar img {
+    width: 100%;
+}
+
+.resultButton {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+    border: 2px solid #be0027;
+    background-color: #be0027;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: ease 0.2s all;
+}
+
+.resultButton:hover {
+    background-color: black;
+    border-color: black;
+}
+
+.resultButton:focus {
+    background-color: #be0027;
+    border-color: #be0027;
+    box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.5);
+    filter: brightness(0.5);    
+}
+
+
+.dark-mode .wrapper{
+    background:  linear-gradient(180deg, #000000 0%, #121212 100%);;
+    color: #fff;
+}
+.dark-mode .wrapper a{
+    color: #fff;
+}
+
+.dark-mode h1,
+.dark-mode h2{
+    color: #fff;
+}
+
+.dark-mode #oko{
+    border-color: #000;
+}
+
+#themeToggle{
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+}
+
+@keyframes slideFromBottom {
+    0% {
+        height: 0;
+    }
+
+    100% {
+        height: 100%;
+    }
+}
+
+.avatarExists{
+    width: 100px;
+}
+
+.highlight{
+    border-color: #be0027;
+    background: #000;
+    color: #fff;
+}
+
+pre{
+    background: #fff;
+}
