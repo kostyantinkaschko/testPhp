@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-require_once("login.php");
+require_once "login.php";
 
 ?>
 
@@ -25,7 +25,7 @@ require_once("login.php");
             <h2>Вхід</h2>
             <form class="form" method="post" action="index.php">
                 <div class="form-field">
-                    <input type="text" name="email_or_phone" id="email_or_phone" required>
+                    <input type="text" name="email_or_phone" value="<?= $_POST['email_or_phone'] ?? '' ?>" id="email_or_phone" required>
                     <label for="email_or_phone" class="label">Email або Телефон</label>
                 </div>
                 <div class="form-field password">
@@ -40,9 +40,7 @@ require_once("login.php");
                 <div class="form-field">
                     <button type="submit" class="btn whiteText btn-submit">Увійти</button>
                 </div>
-                <?php if ($error) { ?>
-                    <p><?= $error ?></p>
-                <?php } ?>
+                <div class="error"><?= $error ?? "" ?></div>
             </form>
 
             <div class="hyperlinks">

@@ -1,8 +1,6 @@
 <?php
 session_start();
-require_once("functions.php");
-require_once("usersResultMassive.php");
-
+require_once "functions.php";
 // echo "<pre>";
 // var_dump($_SESSION["user"]);
 ?>
@@ -16,8 +14,8 @@ require_once("usersResultMassive.php");
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
     <title>Результати</title>
     <link rel="stylesheet" href="css/font.css">
+    <link rel="stylesheet" href="css/tableStyle.css">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/wrapper1200.css">
 </head>
 
 <body>
@@ -38,9 +36,15 @@ require_once("usersResultMassive.php");
             </thead>
             <tbody>
                 <?php
-                foreach ($usersResults as $result) {
+                $highlightClass = "";
+                foreach ($_SESSION["userResult"] as $result) {
                     if ($result[0] === $_SESSION["user"]["id"]) {
-                        $highlightClass = ($result[7] === $maxScore) ? "highlight" : "";
+                        // var_dump($_SESSION["maxScore"]);
+                        if ($result[7] === $_SESSION["maxScore"]) {
+                            $highlightClass = "highlight";
+                        } else {
+                            $highlightClass = "";
+                        }
                 ?>
                         <tr class="<?= $highlightClass ?>">
                             <?php foreach ($result as $resultMassive) { ?>

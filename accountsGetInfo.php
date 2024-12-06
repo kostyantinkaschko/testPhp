@@ -1,26 +1,12 @@
 <?php 
+require_once "functions.php";
 
 if (!isset($_SESSION["user"]) || $_SESSION["user"]["permissionIndex"] != 1) {
     header("Location: profile.php");
     exit();
 }
-$file = "database/users.csv";
-if (($handle = fopen($file, 'r')) !== FALSE) {
-    while (($data = fgetcsv($handle, 1000, ',')) !== FALSE) {
-        $users[] = [
-            'id' => $data[0],
-            'username' => $data[1],
-            'email' => $data[2],
-            'phone' => $data[3],
-            'password' => $data[4],
-            "permissionIndex" => $data[5],
-            "registrationDate" => $data[6],
-            "completedTest" => $data[7],
-        ];
-    }
-    fclose($handle);
-}
-
+// $file = "database/users.csv";
+// $users = getUsers($file);
 
 
 function avatarExist($userId){

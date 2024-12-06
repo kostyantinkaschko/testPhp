@@ -90,7 +90,7 @@ require_once("profileProcessing.php");
         <div class="buttons">
             <?php if ($user["permissionIndex"] == 0) { ?>
                 <a class="orangeButton" href="test.php">Пройти тестування</a>
-                <?php if ($user["completedTest"] !== "null") { var_dump($user["completedTest"]);?>
+                <?php if ($user["completedTest"] !== "null") { ?>
                     <a class="orangeButton" href="result.php">Мої результати</a>
                 <?php }
             }

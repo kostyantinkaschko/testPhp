@@ -268,17 +268,20 @@ body {
     background:  linear-gradient(180deg, #000000 0%, #121212 100%);;
     color: #fff;
 }
-.dark-mode .wrapper a{
+.dark-mode .wrapper a,
+.dark-mode .error,
+.dark-mode input{
     color: #fff;
 }
 
 .dark-mode h1,
-.dark-mode h2{
+.dark-mode h2,
+.dark-mode td{
     color: #fff;
 }
 
 .dark-mode #oko{
-    border-color: #000;
+    border-color: #fff;
 }
 
 #themeToggle{

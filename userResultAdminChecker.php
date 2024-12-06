@@ -1,7 +1,7 @@
 <?php 
 session_start();
-require("functions.php");
-require("userResultAdminCheckerProcessing.php");
+require "functions.php";
+require "userResultAdminCheckerProcessing.php";
 ?>
 
 <!DOCTYPE html> 
