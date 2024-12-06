@@ -1,5 +1,6 @@
 <?php
 require_once "functions.php";
+$file = 'database/users.csv';
 try {
     if (!empty($_POST['username']) && (!empty($_POST['email']) || !empty($_POST['phone'])) && !empty($_POST['password']) && !empty($_POST['confirm_password'])) {
         $username = $_POST['username'];

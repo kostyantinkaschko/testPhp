@@ -3,7 +3,6 @@ require_once "questions.php";
 
 if (!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] !== true) {
     header("Location: index.php");
-    exit();
 }
 
 ?>
@@ -25,12 +24,7 @@ if (!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] !== true) {
 <body>
     <div class="wrapper">
         <form action="resultsProcessing.php" method="post">
-            <?php foreach ($questions as $j => $question) {
-                if ($counter < $questionsCount) {
-                    $counter++;
-                } else {
-                    break;
-                } ?>
+            <?php foreach ($_SESSION["questions"] as $j => $question) { ?>
                 <h1><?= $question["Question"] ?></h1>
                 <div class="answer">
                     <?php

@@ -28,7 +28,7 @@ foreach($startQuestions as $index => &$question) {
 $questions = $startQuestions;
     
 
-$questionsCount = 10;   
+$questionsCount = 5;   
 $counter = 0;
 
 foreach ($questions as &$question) {
@@ -45,10 +45,15 @@ foreach ($questions as &$question) {
 }
 
 shuffle($questions);
+$questionsFinish = [];
+for($i = 0; $i < $questionsCount; $i++){
+    $questionsFinish[] = $questions[$i];
+}
 
-unset($question);
-
+// echo "<pre>";
+// var_dump($questions);
+// die;
 $_SESSION["startQuestions"] = $startQuestions;
-$_SESSION["questions"] = $questions;
+$_SESSION["questions"] = $questionsFinish;
 $_SESSION["questionsCount"] = $questionsCount;
 ?>

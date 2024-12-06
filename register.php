@@ -1,5 +1,4 @@
 <?php
-$file = 'database/users.csv';
 require_once "registerProcessing.php";
 session_start();
 ?>
